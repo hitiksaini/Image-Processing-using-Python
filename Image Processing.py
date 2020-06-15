@@ -27,3 +27,21 @@ enh_img=clahe.apply(gray_img)
 #save a new file
 cv2.imwrite('enhanced.jpg')
 
+
+# resizing
+image = Image.open('example.jpg')
+new_image = image.resize((128, 128))
+new_image.save('image_400.jpg')
+
+print(image.size) # Output: (1200, 776)
+print(new_image.size) # Output: (400, 400)
+
+# changing extension
+im = Image.open('example.jpg')
+im.save('extension.png')
+
+# rotating
+image = Image.open('example.jpg')
+
+image_rot_90 = image.rotate(90)
+image_rot_90.save('image_rot_90.jpg')
